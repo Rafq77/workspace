@@ -24,7 +24,7 @@ else  # TODO elif [ uname -a | grep Ubuntu ]
 	sudo apt-get update
 
 	echo "${PRFX} Installing the usual..."
-	sudo apt-get install vim vim-fugitive vim-common vim-pathogen powerline vim-syntastic clang gcc-8 zsh git google-mock microcom python3 python3-pip curl python-pip flex texinfo help2man libtool-bin gitk libncurses5-dev
+	sudo apt-get install vim vim-fugitive vim-common vim-pathogen powerline vim-syntastic clang gcc-8 zsh git google-mock microcom python3 python3-pip curl python-pip flex texinfo help2man libtool-bin gitk libncurses5-dev automake bison
 
 	PTH="/usr/share/powerline/bindings/zsh/powerline.zsh"
 fi
