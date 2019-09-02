@@ -1,0 +1,12 @@
+[credential]
+        helper = cache --timeout=3600
+[alias]
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+
+[core]
+    repositoryformatversion = 0
+    filemode = true
+    bare = false
+    logallrefupdates = true
+[user]     
+    name = Rafq77 

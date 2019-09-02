@@ -3,7 +3,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/fas/.oh-my-zsh"
+export ZSH="${HOME}/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -100,12 +100,6 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
  alias zshconfig="mate ~/.zshrc"
+ 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias wwc="cd /mnt/c/work/03_training/20180819_CPP/share/cpp11-course/exercise/graphics/"
-
-
-
-
-if [[ -r /usr/share/powerline/zsh/powerline.zsh ]]; then
-    source /usr/share/powerline/zsh/powerline.zsh 
-fi

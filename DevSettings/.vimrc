@@ -10,11 +10,16 @@ set laststatus=2
 set showtabline=2
 set background=dark
 set hidden
-colorscheme solarized
 let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
 
 set expandtab
 
 nmap <C-E> :NERDTreeToggle<CR>
 map gn :bn<CR>
 map gp :bp<CR>
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
