@@ -27,6 +27,9 @@ As for today this is the first draft of my installation script for openSUSe that
 ###### copyForCommit.sh
 This script copies the config files from home dir to  the repository working dir.
 
+##### Microsoft.PowerShell_profile.ps1
+powershell settings and binds
+
 ### 2. Snippets
 Various Snippets that are handy when working on some small local stuff.
 
