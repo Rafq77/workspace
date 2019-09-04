@@ -24,8 +24,19 @@ else  # TODO elif [ uname -a | grep Ubuntu ]
 	sudo apt-get update
 
 	echo "${PRFX} Installing the usual..."
-	sudo apt-get install vim vim-fugitive vim-common vim-pathogen powerline vim-syntastic clang gcc-8 zsh git google-mock microcom python3 python3-pip curl python-pip flex texinfo help2man libtool-bin gitk libncurses5-dev automake bison
+	sudo apt-get install vim vim-fugitive vim-common vim-pathogen powerline vim-syntastic clang gcc-8 zsh git google-mock microcom python3 python3-pip curl python-pip flex texinfo help2man libtool-bin gitk libncurses5-dev automake bison pkg-config qtbase5-dev libssl-dev
 
+	echo "${PRFX} Type 'y' if you want to install packages for yocto build"
+    read confirm
+    if [ "$confirm" = 'y' ]; then
+        sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+        build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
+        xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev \
+        xterm
+    else
+        echo "${PRFX} Input was: $confirm, additional packages will not be installed."
+    fi
+    
 	PTH="/usr/share/powerline/bindings/zsh/powerline.zsh"
 fi
 
