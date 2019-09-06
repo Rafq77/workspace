@@ -11,10 +11,14 @@ set showtabline=2
 set background=dark
 set hidden
 let g:solarized_termcolors=256
-colorscheme solarized
-set background=dark
-
+"colorscheme solarized
+colorscheme desert
 set expandtab
+
+"Settings below are critical for vim when running under tmux
+set background=dark
+set t_Co=256
+
 
 nmap <C-E> :NERDTreeToggle<CR>
 map gn :bn<CR>
