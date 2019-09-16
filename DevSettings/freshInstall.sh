@@ -3,25 +3,29 @@
 PRFX="-=========="
 # TODO extend wth `uname -a` check
 if [ -e /usr/bin/zypper ]; then 
-	# this is for openSuse in WSL
-	echo "${PRFX} Detected Zypper package manager."
+    # this is for openSuse in WSL
+    echo "${PRFX} Detected Zypper package manager."
 
-	echo "${PRFX} Refreshing repositories"
-	sudo zypper refresh
+    echo "${PRFX} Refreshing repositories"
+    sudo zypper refresh
 
-	echo "${PRFX} Installing the usual: compiler, powerline, vim, zsh, git, gtest, gmock" 
-	sudo zypper install vim vim-plugin-NERDtree vim-plugin-fugitive vim-plugin-powerline vim-plugin-colorschemes powerline tmux-powerline clang gcc8-c++ vim-data powerline-fonts zsh git gtest gmock
+    echo "${PRFX} Installing the usual: compiler, powerline, vim, zsh, git, gtest, gmock" 
+    sudo zypper install vim vim-plugin-NERDtree vim-plugin-fugitive vim-plugin-powerline vim-plugin-colorschemes powerline tmux-powerline clang gcc8-c++ vim-data powerline-fonts zsh git gtest gmock
 
-	echo "${PRFX} Creating temporary files for tmux"
-	sudo systemd-tmpfiles --create 
+    echo "${PRFX} Installing additional things for c++ development"
+    sudo zypper install clang-devel cppcheck libc++devel libc++abi-devel
 
-	PTH="/usr/share/powerline/zsh/powerline.zsh"
+    echo "${PRFX} Creating temporary files for tmux"
+    sudo systemd-tmpfiles --create 
+
+    PTH="/usr/share/powerline/zsh/powerline.zsh"
+
 else  # TODO elif [ uname -a | grep Ubuntu ]
-	# this is for regular Linux Install (Ubuntu derivative)
-	echo "${PRFX} Proceeding with apt-get package manager."
+    # this is for regular Linux Install (Ubuntu derivative)
+    echo "${PRFX} Proceeding with apt-get package manager."
 
-	echo "${PRFX} Refreshing repositories"
-	sudo apt-get update
+    echo "${PRFX} Refreshing repositories"
+    sudo apt-get update
 
 	echo "${PRFX} Installing the usual..."
 	sudo apt-get install vim vim-fugitive vim-common vim-pathogen powerline vim-syntastic clang gcc-8 zsh git google-mock microcom python3 python3-pip curl python-pip flex texinfo help2man libtool-bin gitk libncurses5-dev automake bison pkg-config qtbase5-dev libssl-dev
