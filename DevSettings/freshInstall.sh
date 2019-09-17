@@ -15,6 +15,9 @@ if [ -e /usr/bin/zypper ]; then
     echo "${PRFX} Installing additional things for c++ development"
     sudo zypper install clang-devel cppcheck libc++devel libc++abi-devel
 
+    echo "${PRFX} Installing additional things for embedded development"
+    sudo zypper install mbedtls-devel libi2c0-devel i2c-tools
+
     echo "${PRFX} Creating temporary files for tmux"
     sudo systemd-tmpfiles --create 
 
