@@ -8,5 +8,6 @@
     filemode = true
     bare = false
     logallrefupdates = true
+    editor = vim
 [user]     
     name = Rafq77 
