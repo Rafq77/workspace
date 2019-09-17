@@ -8,7 +8,6 @@ set tabstop=4
 set shiftwidth=4
 set laststatus=2
 set showtabline=2
-set background=dark
 set hidden
 let g:solarized_termcolors=256
 "colorscheme solarized
