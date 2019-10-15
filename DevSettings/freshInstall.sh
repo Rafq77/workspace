@@ -19,7 +19,8 @@ if [ -e /usr/bin/zypper ]; then
     sudo zypper install mbedtls-devel libi2c0-devel i2c-tools
 
     echo "${PRFX} Installing additional utilities"
-    sudo zypper install timezone
+    sudo zypper addrepo https://download.opensuse.org/repositories/home:amshinde/openSUSE_Leap_42.1/home:amshinde.repo
+    sudo zypper install timezone tzdata
 
     echo "${PRFX} Creating temporary files for tmux"
     sudo systemd-tmpfiles --create 
