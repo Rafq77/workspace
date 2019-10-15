@@ -18,6 +18,9 @@ if [ -e /usr/bin/zypper ]; then
     echo "${PRFX} Installing additional things for embedded development"
     sudo zypper install mbedtls-devel libi2c0-devel i2c-tools
 
+    echo "${PRFX} Installing additional utilities"
+    sudo zypper install timezone
+
     echo "${PRFX} Creating temporary files for tmux"
     sudo systemd-tmpfiles --create 
 
