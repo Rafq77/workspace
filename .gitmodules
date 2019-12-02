@@ -1,0 +1,33 @@
+[submodule "DevSettings/.vim/vim-airline"]
+	path = DevSettings/.vim/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "DevSettings/.vim/bufexplorer"]
+	path = DevSettings/.vim/bufexplorer
+	url = https://github.com/corntrace/bufexplorer.git
+[submodule "DevSettings/.vim/vim-fugitive"]
+	path = DevSettings/.vim/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "DevSettings/.vim/vim-colors-solarized"]
+	path = DevSettings/.vim/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "DevSettings/.vim/vim-one"]
+	path = DevSettings/.vim/vim-one
+	url = https://github.com/rakr/vim-one.git
+[submodule "DevSettings/.vim/vim-code-dark"]
+	path = DevSettings/.vim/vim-code-dark
+	url = https://github.com/tomasiser/vim-code-dark.git
+[submodule "DevSettings/.vim/tagbar"]
+	path = DevSettings/.vim/tagbar
+	url = https://github.com/majutsushi/tagbar.git
+[submodule "DevSettings/.vim/powerline"]
+	path = DevSettings/.vim/powerline
+	url = https://github.com/powerline/powerline.git
+[submodule "DevSettings/.vim/nerdtree"]
+	path = DevSettings/.vim/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "DevSettings/.vim/fzf.vim"]
+	path = DevSettings/.vim/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "DevSettings/.vim/fzf"]
+	path = DevSettings/.vim/fzf
+	url = https://github.com/junegunn/fzf.git
