@@ -1,18 +1,14 @@
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="${HOME}/.oh-my-zsh"
+  export ZSH=/home/sosr/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell" # its an arrow
-# ZSH_THEME="candyLine"
 ZSH_THEME="agnoster"
-# ZSH_THEME="blinks"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -97,11 +93,35 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
+#
 # Example aliases
-alias zshconfig="mate ~/.zshrc"
-
+# alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias wwc="cd /mnt/c/work/03_training/20180819_CPP/share/cpp11-course/exercise/graphics/"
-alias tmp="sudo systemd-tmpfiles --create"
+
+alias tags="ctags -R ."
+
+export LANG="en_US.UTF-8"
+export FZF_DEFAULT_COMMAND='rg --files'
+
+#within docker
+
+function cdf()
+{
+    cd "$(dirname "$(find . -name $1 | head -1)")"
+}
+
+function c()
+{
+  cd $(dirname $(fzf))
+}
+
+function f()
+{
+    find . -name $1 
+}
+
+function e()
+{
+    grep . -rnwe $1 
+}
 
